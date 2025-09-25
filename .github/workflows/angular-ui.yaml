@@ -1,0 +1,22 @@
+name: Angular UI CI
+
+on:
+  push:
+    paths:
+      - "apps/angular/ui/**"
+      - "apps/angular/ui-e2e/**"
+  pull_request:
+
+jobs:
+  angular-ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install
+      - run: npx nx lint ui
+      - run: npx nx test ui
+    #   - run: npx nx e2e ui-e2e
+      - run: npx nx build ui
