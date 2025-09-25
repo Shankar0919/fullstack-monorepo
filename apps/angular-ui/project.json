@@ -14,7 +14,7 @@
         "browser": "apps/angular-ui/src/main.ts",
         "index": "apps/angular-ui/src/index.html",
         "polyfills": ["zone.js"],
-  "tsConfig": "apps/angular-ui/tsconfig.app.json",
+        "tsConfig": "apps/angular-ui/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {

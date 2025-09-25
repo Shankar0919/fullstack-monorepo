@@ -2,7 +2,12 @@
   "name": "@fullstack-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "lint:angular-ui": "nx lint angular-ui",
+    "test:angular-ui": "nx test angular-ui",
+    "build:angular-ui": "nx build angular-ui",
+    "serve:angular-ui": "nx serve angular-ui --open"
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/core": "~18.2.12",

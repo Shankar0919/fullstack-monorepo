@@ -11,10 +11,9 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should render title', () => {
+  it('should render router outlet only (no welcome message)', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome to Angular 18 with Nx!'
-    );
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
+    expect(compiled.querySelector('h1')).toBeFalsy();
   });
 });
