@@ -2,9 +2,6 @@ name: Angular UI CI
 
 on:
   push:
-    paths:
-      - "apps/angular/ui/**"
-      - "apps/angular/ui-e2e/**"
   pull_request:
 
 jobs:
