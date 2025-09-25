@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 18
       - run: npm install
-      - run: npx nx lint ui
-      - run: npx nx test ui
-    #   - run: npx nx e2e ui-e2e
-      - run: npx nx build ui
+      - run: npx nx lint angular-ui
+      - run: npx nx test angular-ui
+    #   - run: npx nx e2e angular-ui-e2e
+      - run: npx nx build angular-ui
