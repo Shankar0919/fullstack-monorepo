@@ -15,10 +15,7 @@
     ],
     "sharedGlobals": []
   },
-  "workspaceLayout": {
-    "appsDir": "apps",
-    "libsDir": "libs"
-  },
+  "workspaceLayout": { "appsDir": "apps", "libsDir": "libs" },
   "targetDefaults": {
     "@angular/build:application": {
       "cache": true,
@@ -37,15 +34,8 @@
     "@nx/jest:jest": {
       "cache": true,
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
-      "options": {
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
-      }
+      "options": { "passWithNoTests": true },
+      "configurations": { "ci": { "ci": true, "codeCoverage": true } }
     }
   },
   "generators": {
@@ -55,5 +45,6 @@
       "style": "scss",
       "unitTestRunner": "jest"
     }
-  }
+  },
+  "nxCloudId": "68d66a635b8610daff2305ad"
 }
