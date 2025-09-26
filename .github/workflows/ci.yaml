@@ -1,4 +1,6 @@
 name: Fullstack CI
+permissions:
+  contents: read
 
 on:
   push:
