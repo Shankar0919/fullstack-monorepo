@@ -2,31 +2,32 @@ name: Fullstack CI
 
 on:
   push:
-    branches: [**]
+    branches:
+      - '**'
   pull_request:
-    branches: [**]
+    branches:
+      - '**'
 
 jobs:
-    angular-ui:
-        runs-on: ubuntu-latest
+  angular-ui:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v3
-              with:
-                node-version: 20
-            
-            - name: Install dependencies
-              run: npm install
-            - name: Build Angular
-              run: npx nx build angular-ui
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-            - name: Run Angular Lint
-              run: npx nx lint angular-ui
+      - name: Install dependencies
+        run: npm install
+      - name: Build Angular
+        run: npx nx build angular-ui
 
-            - name: Run Angular tests
-              run: npx nx test angular-ui
+      - name: Run Angular Lint
+        run: npx nx lint angular-ui
 
+      - name: Run Angular tests
+        run: npx nx test angular-ui
